@@ -1,3 +1,6 @@
+
+# Lista 1
+
 # Questão 5 - Scanner e Formatação de Dados
 
 ## Scanner
@@ -168,4 +171,68 @@ public class Contador {
     }
 }
 ```
+# Lista 2
 
+
+## Questão 1 - Getters, Setters e Encapsulamento
+
+Getters e setters aplicam o princípio do **encapsulamento**: o atributo fica `private` e o acesso passa por métodos que a própria classe controla.
+
+Isso permite:
+
+- Proteger os dados do objeto;
+- Validar valores antes de alterá-los;
+- Evitar que o objeto fique em um estado inválido;
+- Alterar a implementação interna da classe sem afetar o código que a utiliza.
+
+### Exemplo em Java
+
+```java
+public class Aluno {
+    private int idade;
+
+    public Aluno(int idade) {
+        setIdade(idade);
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        if (idade >= 0) {
+            this.idade = idade;
+        } else {
+            System.out.println("Idade inválida!");
+        }
+    }
+}
+```
+## Questão 2 - Classe Livro
+
+## a) Informações relevantes
+
+As informações mais relevantes que podemos utilizar para representar um livro são:
+
+- Título;
+- ISBN;
+- Editora;
+- Ano de publicação;
+- Autores.
+
+### b) Abstração
+
+Ao criar a classe `Livro`, escolhemos apenas os atributos e comportamentos **essenciais ao contexto do sistema** e ignoramos o restante.
+
+Ou seja, a classe é um modelo simplificado que representa o conceito de "livro" para o problema que queremos resolver.
+
+## c) Comportamentos
+
+Alguns comportamentos que podem ser representados na classe `Livro` são:
+
+```java
+consultarLivro();
+emprestarLivro();
+devolverLivro();
+
+```
