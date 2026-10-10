@@ -236,3 +236,29 @@ emprestarLivro();
 devolverLivro();
 
 ```
+
+# Lista 3
+
+## Questão 4 - Array de Tipos Primitivos × Array de Objetos
+
+### a) Alocação de memória
+
+Em Java, todo array é um objeto e fica no **heap**. A diferença está no que cada posição armazena:
+
+- **`int[]` / `double[]`:** cada posição guarda diretamente o valor, que começa com o valor padrão do tipo (`0` ou `0.0`).
+- **`Aluno[]` / `Produto[]`:** cada posição guarda uma referência a um objeto, que começa como `null`. Os objetos são criados separadamente, com `new`, e ocupam outras áreas do heap.
+
+Exemplo em Java:
+
+```java
+int[] numeros = new int[3];      // [0, 0, 0]
+Aluno[] alunos = new Aluno[3];   // [null, null, null]
+alunos[0] = new Aluno("Ana", 1); // primeira posição recebe uma referência
+```
+
+### b) Cuidados ao acessar um array de objetos
+
+- **`NullPointerException`:** chamar um método em uma posição ainda não preenchida pode causar erro. Crie o objeto antes de utilizá-lo, verifique se a posição é diferente de `null` ou percorra apenas as posições preenchidas.
+- **Cópia de referências:** `Aluno[] copia = alunos;` copia apenas a referência ao array. Assim, os dois nomes apontam para o mesmo array, e alterações feitas por um serão percebidas pelo outro.
+- **Índice inválido:** acessar uma posição fora do intervalo de `0` a `length - 1` gera `ArrayIndexOutOfBoundsException`.
+```
