@@ -1,4 +1,5 @@
-package Lista2;
+package Lista2.Questao4;
+
 import java.util.Scanner;
 
 public class MainContaCorrente {

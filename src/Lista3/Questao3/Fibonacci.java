@@ -1,4 +1,4 @@
-package Lista3;
+package Lista3.Questao3;
 
 import java.util.Arrays;
 

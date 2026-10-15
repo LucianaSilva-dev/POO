@@ -1,4 +1,4 @@
-package Lista2;
+package Lista2.Questao4;
 
 public class ContaCorrente {
     private int numero;

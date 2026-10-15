@@ -1,4 +1,4 @@
-package Lista3;
+package Lista3.Questao1;
 
 public class Aluno {
     private String nome;

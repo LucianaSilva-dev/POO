@@ -1,4 +1,4 @@
-package Lista2;
+package Lista2.Questao3;
 
 public class MainProduto {
     public static void main(String[] args) {
